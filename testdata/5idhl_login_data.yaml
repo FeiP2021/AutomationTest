@@ -1,0 +1,30 @@
+-
+  id: test_login
+  detail : 密码错误
+  screenshot : phone_pawd_success
+  data :
+    phone : 18500262329
+    password: a123456
+    code: pentestyz
+  check :
+    - FeiP
+-
+  id: test_login
+  detail : 验证码错误
+  screenshot : phone_pawd_success
+  data :
+    phone : 18500262329
+    password: asd123
+    code: 3a
+  check :
+    - FeiP
+-
+  id: test_login
+  detail : 手机号和密码正确
+  screenshot : phone_pawd_success
+  data :
+    phone : 18500262329
+    password: asd123
+    code: pentestyz
+  check :
+    - FeiP

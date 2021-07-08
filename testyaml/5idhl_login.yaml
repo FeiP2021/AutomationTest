@@ -1,0 +1,37 @@
+estinfo:
+      - id: test_login
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: /html/body/app-root/div[1]/div/div/div/a[1]
+        find_type: XPATH
+        operate_type: click
+        info: 打开登录对话框
+      - element_info: /html/body/modal-container/div/div/app-registered-login/div/ul/li[2]/span
+        find_type: XPATH
+        operate_type: click
+        info: 选择用户名登录
+      - element_info: /html/body/modal-container/div/div/app-registered-login/div/div[3]/form/div[1]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入手机号或其它用户名
+      - element_info: /html/body/modal-container/div/div/app-registered-login/div/div[3]/form/div[2]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入密码
+      - element_info: /html/body/modal-container/div/div/app-registered-login/div/div[3]/form/div[3]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入验证码
+      - element_info: /html/body/modal-container/div/div/app-registered-login/div/div[3]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击登录按钮
+      - element_info: /html/body/app-root/div[1]/div/div/div/a[3]
+        find_type: XPATH
+        operate_type: click
+        info: 点击退出按钮
+check:
+      - element_info: /html/body/app-root/div[1]/div/div/div/a[3]
+        find_type: XPATH
+        info: 成功登录
