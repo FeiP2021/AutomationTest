@@ -122,9 +122,9 @@ class dhl_login(Page):
         sleep(1)
         # self.keeplogin()
         self.login_button3()
-        sleep(5)
+        sleep(2)
         self.logout_button
-        sleep(5)
+        sleep(2)
 
     # phone_pawd_error_hint_loc = (By.XPATH,testData.get_CheckElementinfo(0))
     # user_login_success_loc = (By.XPATH,testData.get_CheckElementinfo(1))
