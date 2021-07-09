@@ -55,6 +55,6 @@ def send_mail(file_new):
         server.login(USER,PWD)
         server.sendmail(SENDER,RECEIVER,msg.as_string())
         server.quit()
-        print("邮件发送成功！")
+        print("测试报告邮件发送成功！")
     except Exception as  e:
         print("失败: " + str(e))
