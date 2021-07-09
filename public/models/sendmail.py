@@ -48,9 +48,8 @@ def send_mail(file_new):
     msg['to'] = RECEIVER
 
     try:
-        server = smtplib.SMTP(HOST)
+        server = smtplib.SMTP()
         server.connect(HOST)
-        server.ehlo()
         server.starttls()
         server.login(USER,PWD)
         server.sendmail(SENDER,RECEIVER,msg.as_string())
