@@ -20,7 +20,7 @@ def add_case(test_path=setting.TEST_DIR):
 
 def run_case(all_case,result_path=setting.TEST_REPORT):
     """执行所有的测试用例"""
-    now = time.strftime("%Y-%m-%d %H_%M_%S")
+    now = time.strftime("%Y-%m-%d-%H_%M_%S")
     filename =  result_path + '/' + now + 'result.html'
     fp = open(filename,'wb')
     runner = HTMLTestRunner(stream=fp,title='UI自动化测试报告',

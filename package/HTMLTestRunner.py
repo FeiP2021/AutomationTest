@@ -775,7 +775,7 @@ class HTMLTestRunner(Template_mixin):
         status = []
         status.append('总共 %s' % (result.success_count + result.failure_count + result.error_count))
         if result.success_count: status.append('通过 %s' % result.success_count)
-       # status.append(u'<span class="tj passCase">Pass</span>%s' % result.success_count)
+        #status.append(u'<span class="tj passCase">Pass</span>%s' % result.success_count)
         if result.failure_count: status.append('失败 %s' % result.failure_count)
         if result.error_count:   status.append('错误 %s' % result.error_count  )
         if status:

@@ -14,7 +14,7 @@ from public.page_obj.dhl_loginPage import dhl_login
 from public.models.log import Log
 
 try:
-    f =open(setting.TEST_DATA_YAML + '/' + '5idhl_login_data.yaml',encoding='utf-8')
+    f =open(setting.TEST_DATA_YAML + '/' + 'dhl_login_data.yaml',encoding='utf-8')
     testData = yaml.load(f)
 except FileNotFoundError as file:
     log = Log()
