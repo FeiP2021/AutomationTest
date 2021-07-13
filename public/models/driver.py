@@ -2,8 +2,8 @@
 # _*_ coding:utf-8 _*_
 __author__ = 'FeiP'
 
-
 from selenium.webdriver import Remote
+
 
 def browser():
     """
@@ -13,11 +13,11 @@ def browser():
     try:
         host = '127.0.0.1:4444'
         driver = Remote(command_executor='http://' + host + '/wd/hub',
-                        desired_capabilities={ 'platform': 'ANY',
-                                               'browserName': 'chrome',
-                                               'version': "",
-                                               'javascriptEnabled': True
-                                            }
+                        desired_capabilities={'platform': 'ANY',
+                                              'browserName': 'chrome',
+                                              'version': "",
+                                              'javascriptEnabled': True
+                                              }
                         )
         # driver = Remote(command_executor='http://' + host + '/wd/hub',
         #                 desired_capabilities={'platform': 'ANY',
