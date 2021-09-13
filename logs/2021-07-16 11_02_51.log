@@ -1,0 +1,1 @@
+[2021-07-16 11:03:18,969] [log.py|__console] [line:49] ERROR   : <public.page_obj.dhl_loginPage.dhl_login object at 0x1021e8a90>页面中未能找到('xpath', '/html/body/modal-container/div/div/app-registered-login/div/ul/li[2]/span')元素
