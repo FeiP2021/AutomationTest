@@ -23,7 +23,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """5idhl登录测试"""
+    """5idhl登录功能模块自检测试"""
 
     def user_login_verify(self, phone, password, code):
         """
