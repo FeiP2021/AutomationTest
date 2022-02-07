@@ -26,7 +26,7 @@ def run_case(all_case, result_path=setting.TEST_REPORT):
     now = time.strftime("%Y-%m-%d-%H_%M_%S")
     filename = result_path + '/' + now + 'result.html'
     fp = open(filename, 'wb')
-    runner = HTMLTestRunner(stream=fp, title='UI自动化测试报告',
+    runner = HTMLTestRunner(stream=fp, title='5iDHL定期自检报告',
                             description='环境：MacBook Pro 浏览器：chrome 版本 91.0.4472.114',
                             tester='Best QA！')
     runner.run(all_case)

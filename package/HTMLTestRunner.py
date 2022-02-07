@@ -188,7 +188,7 @@ class Template_mixin(object):
         2: '错误',
     }
     # 增加DEFAULT_TESTER变量  --YinJia
-    DEFAULT_TITLE = '自动化测试报告'
+    DEFAULT_TITLE = '定期自检报告'
     DEFAULT_DESCRIPTION = ''
     DEFAULT_TESTER = 'Best QA！'
 
