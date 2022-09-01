@@ -14,9 +14,9 @@ from public.models.sendmail import send_mail
 # 测试报告存放文件夹，如不存在，则自动创建一个report目录
 if not os.path.exists(setting.TEST_REPORT): os.makedirs(setting.TEST_REPORT + '/' + "screenshot")
 
-
 def add_case(test_path=setting.TEST_DIR):
     """加载所有的测试用例"""
+    # discover = unittest.defaultTestLoader.discover(test_path, pattern='*_sta.py')
     discover = unittest.defaultTestLoader.discover(test_path, pattern='*_sta.py')
     return discover
 
