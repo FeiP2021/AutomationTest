@@ -1,0 +1,33 @@
+estinfo:
+      - id: test_holiday
+        title: 查询节假日
+        info: 打开5iDHL首页
+testcase:
+      - element_info:  /html/body/app-root/div[3]/div[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击在线咨询
+      - element_info: /html/body/app-root/div[2]/app-online/div/div/div[1]/app-common/div/ul/li[1]/span
+        find_type: XPATH
+        operate_type: click
+        info: 点击我要查询
+      - element_info: /html/body/app-root/div[2]/app-index/div/div/div[2]/div/ul/li[3]
+        find_type: XPATH
+        operate_type: click
+        info: 点击各国节假日
+      - element_info: /html/body/app-root/div[2]/app-national-holidays/div/div/div[2]/div/input
+        find_type: XPATH
+        operate_type: click
+      - element_info: /html/body/app-root/div[2]/app-national-holidays/div/div/div[2]/div/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入地区
+      - element_info: /html/body/app-root/div[2]/app-national-holidays/div/div/div[2]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击查询
+
+check:
+      - element_info: /html/body/app-root/div[2]/app-national-holidays/div/div/div[4]/div/table/tbody/tr[2]/td[1]
+        find_type: XPATH
+        info: 成功查询

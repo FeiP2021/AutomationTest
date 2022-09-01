@@ -1,0 +1,8 @@
+-
+  id: test_holiday
+  detail : 输入国家和地区信息
+  screenshot : test
+  data :
+    country : ALBANIA
+  check :
+    - TH
