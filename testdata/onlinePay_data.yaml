@@ -1,0 +1,9 @@
+-
+  id: test_setup001.1
+  detail : 昵称和签名档为空
+  screenshot : name_empty
+  data:
+    name: ""
+    sign: ""
+  check :
+     - 请输入用户昵称
