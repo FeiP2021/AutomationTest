@@ -21,7 +21,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_holiday1(myunit.MyTest):
-    """5idhl登录测试"""
+    """各国节假日查询"""
 
     def user_holiday_verify(self, country):
         """
