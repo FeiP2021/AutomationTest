@@ -1,0 +1,13 @@
+estinfo:
+      - id: test_login
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: /html/body/app-root/div[1]/div/div/ul/li[3]/a
+        find_type: XPATH
+        operate_type: click
+        info: 点击查询和服务
+check:
+      - element_info: /html/body/app-root/div[1]/div/div/div/a[3]
+        find_type: XPATH
+        info: 成功登录
