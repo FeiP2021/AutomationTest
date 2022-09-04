@@ -28,7 +28,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """首页---设置"""
+    """首页"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -38,13 +38,6 @@ class Demo_UI(myunit.MyTest):
         :return:
         """
         dhl_login(self.driver).user_login(phone,password,code)
-
-    # def exit_login_check(self):
-    #     """
-    #     退出登录
-    #     :return:
-    #     """
-    #     dhl_login(self.driver).login_exit()
 
     def onlinePay_verify(self,*args):
 

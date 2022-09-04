@@ -7,7 +7,7 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 点击查询和服务
-      - element_info: //span[contains(.,\'在线付款\')]")
+      - element_info: //div[@id='queryMenuId']/ul[2]/li[3]/span
         find_type: XPATH
         operate_type: click
         info: 点击在线付款
@@ -15,15 +15,15 @@ testcase:
         find_type: NAME
         operate_type: send_keys
         info: 输入赊销账号
-      - element_info: one0
-        find_type: ID
+      - element_info: payValue
+        find_type: NAME
         operate_type: send_keys
         info: 输入付款金额
-      - element_info: //button[contains(.,\'提交订单并支付\')]")
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-online-payment/div/div/div/div/div[3]/button
         find_type: XPATH
         operate_type: click
         info: 提交订单并支付
-      - element_info: //button[contains(.,\'立即支付\')]")
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-pay-record-to-pay/div/div/div/div[8]/button[2]
         find_type: XPATH
         operate_type: click
         info: 立即支付
