@@ -20,7 +20,7 @@ pwd = LoginData[2]['data']['password']
 code = LoginData[2]['data']['code']
 
 try:
-    f_onlinePay =open(setting.TEST_DATA_YAML + '/' + 'onlinePay_data.yaml',encoding='utf-8')
+    f_onlinePay =open(setting.TEST_DATA_YAML + '/' + 'online_data.yaml',encoding='utf-8')
     onlinePayData = yaml.load(f_onlinePay)
 except FileNotFoundError as file:
     log = Log()
