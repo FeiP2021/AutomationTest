@@ -3,7 +3,6 @@
 __author__ = 'Zhaoyj'
 
 import os, sys
-
 sys.path.append(os.path.dirname(__file__))
 from config import setting
 import unittest, time
@@ -16,24 +15,22 @@ if not os.path.exists(setting.TEST_REPORT): os.makedirs(setting.TEST_REPORT + '/
 
 def add_case(test_path=setting.TEST_DIR):
     """加载所有的测试用例"""
-    # discover = unittest.defaultTestLoader.discover(test_path, pattern='*_sta.py')
-    discover = unittest.defaultTestLoader.discover(test_path, pattern='onlinePay_sta.py')
+    discover = unittest.defaultTestLoader.discover(test_path, pattern='*_sta.py')
+    # discover = unittest.defaultTestLoader.discover(test_path, pattern='onlinePay_sta.py')
     return discover
-
 
 def run_case(all_case, result_path=setting.TEST_REPORT):
     """执行所有的测试用例"""
     now = time.strftime("%Y-%m-%d-%H_%M_%S")
     filename = result_path + '/' + now + 'result.html'
     fp = open(filename, 'wb')
-    runner = HTMLTestRunner(stream=fp, title='5iDHL定期自检报告',
-                            description='环境：MacBook Pro 浏览器：chrome 版本 91.0.4472.114',
+    runner = HTMLTestRunner(stream=fp, title='5iDHL自动化测试报告',
+                            description='环境：MacBook Pro M1 Chrome浏览器：版本 105.0.5195.52（正式版本） (arm64)',
                             tester='Best QA！')
     runner.run(all_case)
     fp.close()
     report = new_report(setting.TEST_REPORT)  # 调用模块生成最新的报告
     send_mail(report)  # 调用发送邮件模块
-
 
 if __name__ == "__main__":
     cases = add_case()

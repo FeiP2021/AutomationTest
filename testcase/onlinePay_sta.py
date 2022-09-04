@@ -28,7 +28,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """首页"""
+    """在线付款-赊销账号付款"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
