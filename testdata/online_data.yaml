@@ -1,0 +1,9 @@
+-
+  id: test_onlinePay.1
+  detail : 赊销付款
+  screenshot : onlinePaysuccess
+  data :
+    dhlCreditCode : 600006457
+    count: 1
+  check :
+    - FeiP
