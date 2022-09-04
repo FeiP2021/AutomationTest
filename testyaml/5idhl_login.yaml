@@ -1,4 +1,4 @@
-estinfo:
+testinfo:
       - id: test_login
         title: 登录5iDHL
         info: 打开5iDHL首页

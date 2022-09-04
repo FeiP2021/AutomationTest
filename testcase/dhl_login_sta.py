@@ -5,7 +5,6 @@ __author__ = 'Zhaoyj'
 import os, sys
 
 from public.models.sendmail import send_mail
-
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest, ddt, yaml
 from config import setting

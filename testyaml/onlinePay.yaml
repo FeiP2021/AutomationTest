@@ -1,4 +1,4 @@
-estinfo:
+testinfo:
       - id: test_login
         title: 登录5iDHL
         info: 打开5iDHL首页
@@ -7,6 +7,26 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 点击查询和服务
+      - element_info: //span[contains(.,\'在线付款\')]")
+        find_type: XPATH
+        operate_type: click
+        info: 点击在线付款
+      - element_info: dhlCreditCode
+        find_type: NAME
+        operate_type: send_keys
+        info: 输入赊销账号
+      - element_info: one0
+        find_type: ID
+        operate_type: send_keys
+        info: 输入付款金额
+      - element_info: //button[contains(.,\'提交订单并支付\')]")
+        find_type: XPATH
+        operate_type: click
+        info: 提交订单并支付
+      - element_info: //button[contains(.,\'立即支付\')]")
+        find_type: XPATH
+        operate_type: click
+        info: 立即支付
 check:
       - element_info: /html/body/app-root/div[1]/div/div/div/a[3]
         find_type: XPATH
