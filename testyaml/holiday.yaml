@@ -1,4 +1,4 @@
-estinfo:
+testinfo:
       - id: test_holiday
         title: 查询节假日
         info: 打开5iDHL首页

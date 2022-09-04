@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 __author__ = 'Zhaoyj'
-
-
 import os,sys
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
 from config import setting
@@ -20,7 +21,7 @@ code = LoginData[2]['data']['code']
 
 try:
     f_onlinePay =open(setting.TEST_DATA_YAML + '/' + 'onlinePay_data.yaml',encoding='utf-8')
-    OnlinePayData = yaml.load(f_onlinePay)
+    onlinePayData = yaml.load(f_onlinePay)
 except FileNotFoundError as file:
     log = Log()
     log.error("文件不存在：{0}".format(file))
@@ -38,32 +39,29 @@ class Demo_UI(myunit.MyTest):
         """
         dhl_login(self.driver).user_login(phone,password,code)
 
-    def exit_login_check(self):
-        """
-        退出登录
-        :return:
-        """
-        dhl_login(self.driver).login_exit()
+    # def exit_login_check(self):
+    #     """
+    #     退出登录
+    #     :return:
+    #     """
+    #     dhl_login(self.driver).login_exit()
 
-    def onlinePay_test(self,*args):
-        onlinePay(self.driver).dig_setup(*args)
+    def onlinePay_verify(self,*args):
 
-    @ddt.data(*OnlinePayData)
+        onlinePay(self.driver).onlinePay_Credit(*args)
+
+    @ddt.data(*onlinePayData)
     def test_onlinePay(self,datayaml):
         """
-        首页---设置操作测试
-        :param datayaml: 加载login_data登录测试数据
+        在线付款
+        :param datayaml: 加载测试数据
         :return:
         """
         log = Log()
-        # log.info("当前执行测试用例ID-> {0} ; 测试点-> {1}".format(datayaml['id'],datayaml['detail']))
-
         # 调用登录方法
-        self.user_login_verify(ph,pwd,code)
-
-        # 调用设置接口
-        # self.onlinePay_test(datayaml['data']['name'],datayaml['data']['sign'])
-        self.onlinePay_test(datayaml['data']['name'],datayaml['data']['sign'])
+        self.user_login_verify(ph, pwd, code)
+        log.info("当前执行测试用例ID-> {0} ; 测试点-> {1}".format(datayaml['id'], datayaml['detail']))
+        self.onlinePay_verify(datayaml['data']['dhlCreditCode'], datayaml['data']['count'])
 
         po = onlinePay(self.driver)
 
