@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 # ---
 # @Software: PyCharm
-# @File: applyMaterials_sta.py
-# @Author: feip
+# @Author: zhaoyj
 # @Site:
 # @Time: 9月 07, 2022
 # ---

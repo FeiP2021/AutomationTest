@@ -7,7 +7,7 @@
     password: a123456
     code: pentestyz
   check :
-    - FeiP
+    - zhaoyj
 -
   id: test_login
   detail : 验证码错误
@@ -17,7 +17,7 @@
     password: asd123
     code: 3a
   check :
-    - FeiP
+    - zhaoyj
 -
   id: test_login
   detail : 手机号和密码正确
@@ -27,4 +27,4 @@
     password: asd123
     code: pentestyz
   check :
-    - FeiP
+    - zhaoyj

@@ -1,6 +1,11 @@
-#!/usr/bin/env python
-# _*_ coding:utf-8 _*_
-__author__ = 'FeiP'
+#!python3.9
+# -*- coding: utf-8 -*-
+# ---
+# @Software: PyCharm
+# @Author: zhaoyj
+# @Site:
+# @Time: 9月 07, 2022
+# ---
 
 import logging, time
 import os, sys
