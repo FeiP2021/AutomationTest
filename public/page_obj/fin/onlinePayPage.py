@@ -1,7 +1,12 @@
-#!/usr/bin/env python
-# _*_ coding:utf-8 _*_
-__author__ = 'YinJia'
-
+#!python3.9
+# -*- coding: utf-8 -*-
+# ---
+# @Software: PyCharm
+# @File: applyMaterials_sta.py
+# @Author: feip
+# @Site:
+# @Time: 9月 07, 2022
+# ---
 import os,sys
 from selenium.webdriver import ActionChains
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
