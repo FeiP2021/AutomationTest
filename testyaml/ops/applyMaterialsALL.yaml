@@ -1,0 +1,33 @@
+testinfo:
+      - id: test_login
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: /html/body/app-root/div[1]/div/div/ul/li[5]/a
+        find_type: XPATH
+        operate_type: click
+        info: 点击协议客户
+      - element_info: //ul[@id='XYclientMenuId']/li[3]
+        find_type: XPATH
+        operate_type: click
+        info: 点击备用物料申请
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-material-application/div/div[2]/div[2]/div/div[4]/div/div/div/div/select
+        find_type: XPATH
+        operate_type: click
+        info: 选择物料类型
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-material-application/div/div[2]/div[2]/div/div[5]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 提交申请
+      - element_info: /html/body/modal-container/div/div/div/div[4]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 申请确认
+      - element_info: /html/body/modal-container/div/div/div/div[3]/button
+        find_type: XPATH
+        operate_type: click
+        info: 我知道了
+check:
+      - element_info: /html/body/app-root/div[1]/div/div/div/a[3]
+        find_type: XPATH
+        info: 成功登录

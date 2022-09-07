@@ -1,0 +1,32 @@
+-
+  id: test_online.1
+  detail : 物料数量
+  screenshot : applyMaterials
+  data :
+    materialstype : 1
+  check :
+    - zhaoyj
+-
+  id: test_online.1
+  detail : 物料数量
+  screenshot : applyMaterials
+  data :
+    materialstype : 2
+  check :
+    - zhaoyj
+-
+  id: test_online.1
+  detail : 物料数量
+  screenshot : applyMaterials
+  data :
+    materialstype : 3
+  check :
+    - zhaoyj
+-
+  id: test_online.1
+  detail : 物料数量
+  screenshot : applyMaterials
+  data :
+    materialstype : 4
+  check :
+    - zhaoyj
