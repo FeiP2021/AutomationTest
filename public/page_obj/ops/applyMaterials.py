@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # ---
 # @Software: PyCharm
-# @File: applyMaterials.py
 # @Author: zhaoyj
 # @Site: 
 # @Time: 9月 07, 2022
