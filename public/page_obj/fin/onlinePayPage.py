@@ -12,7 +12,7 @@ from time import sleep
 from public.models.GetYaml import getyaml
 from public.models.log import Log
 
-testData = getyaml(setting.TEST_Element_YAML + '/' + 'onlinePay.yaml')
+testData = getyaml(setting.FIN_TEST_Element_YAML + '/' + 'onlinePay.yaml')
 log = Log()
 
 class onlinePay(Page):

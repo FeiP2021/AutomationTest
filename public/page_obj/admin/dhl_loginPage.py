@@ -13,7 +13,7 @@ from public.page_obj.base import Page
 from time import sleep
 from public.models.GetYaml import getyaml
 
-testData = getyaml(setting.TEST_Element_YAML + '/' + '5idhl_login.yaml')
+testData = getyaml(setting.ADMIN_TEST_Element_YAML + '/' + '5idhl_login.yaml')
 
 
 class dhl_login(Page):

@@ -11,7 +11,7 @@ from public.page_obj.base import Page
 from time import sleep
 from public.models.GetYaml import getyaml
 
-testData = getyaml(setting.TEST_Element_YAML + '/' + 'holiday.yaml')
+testData = getyaml(setting.CSD_TEST_Element_YAML + '/' + 'holiday.yaml')
 
 
 class dhl_holiday(Page):
