@@ -50,4 +50,5 @@ class applyMaterials(Page):
         self.find_element(*self.applyMaterials_click4).click()
         sleep(2)
         self.find_element(*self.applyMaterials_click5).click()
+        sleep(3)
 

@@ -23,6 +23,7 @@ code = LoginData[2]['data']['code']
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
+    """物料申请"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
