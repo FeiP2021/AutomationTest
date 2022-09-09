@@ -57,7 +57,7 @@ class Demo_UI(myunit.MyTest):
     @ddt.data(*applyMaterialsData)
     def test_applyMaterialsALL(self,datayaml):
         """
-        物料申请
+        物料申请循环测试
         :param datayaml: 加载测试数据
         :return:
         """
