@@ -21,7 +21,8 @@ from public.models.log import Log
 con = configparser.ConfigParser()
 con.read(setting.CONFIG_DIR, encoding='utf-8')
 # --------- 读取config.ini配置文件 ---------------
-login_url = con.get("WebURL", "URL")
+login_url_uat = con.get("WebURL", "UAT-URL")
+login_url_prod = con.get("WebURL", "PROD-URL")
 log = Log()
 
 
@@ -30,7 +31,7 @@ class Page(object):
     基础类，用于页面对象类的继承
     """
 
-    def __init__(self, selenium_driver, base_url=login_url, parent=None):
+    def __init__(self, selenium_driver, base_url=login_url_uat, parent=None):
         self.base_url = base_url
         self.driver = selenium_driver
         self.parent = parent
