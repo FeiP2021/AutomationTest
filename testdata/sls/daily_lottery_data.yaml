@@ -1,0 +1,8 @@
+-
+  id: test_daily_lottery
+  detail : 每日抽奖
+  screenshot : test
+  data :
+    comment: test
+  check :
+    - TH

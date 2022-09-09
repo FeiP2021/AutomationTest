@@ -1,0 +1,57 @@
+estinfo:
+      - id: test_payment_record
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: //a[contains(text(),'市场活动')]
+        find_type: XPATH
+        operate_type: click
+        info: 点击市场活动
+      - element_info:  //ul[@id='marketingMenuId']/li[2]/span
+        find_type: XPATH
+        operate_type: click
+        info: 点击每日抽奖
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-daily-draw/div/div[2]/div[2]/div[3]/label
+        find_type: XPATH
+        operate_type: click
+        info: 点击一个账号
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-daily-draw/div/div[2]/div[2]/div[4]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-daily-draw/div/div[2]/div[3]/div[4]/div[2]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击抽奖
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-daily-draw/div/div[2]/div/div/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击领取奖品
+      - element_info: /html/body/modal-container/div/div/div[3]/div[2]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info:  //body[@id='BodyID']/modal-container/div/div/div/div[3]/div/div[2]/span/label
+        find_type: XPATH
+        operate_type: click
+        info: 评价1
+      - element_info: //body[@id='BodyID']/modal-container/div/div/div/div[3]/div[2]/div[2]/span/label
+        find_type: XPATH
+        operate_type: click
+        info: 评价2
+      - element_info:  //body[@id='BodyID']/modal-container/div/div/div/div[3]/div[3]/div[2]/span/label
+        find_type: XPATH
+        operate_type: click
+        info: 评价3
+      - element_info:  /html/body/modal-container/div/div/div/div[3]/div[4]/textarea
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入感言
+      - element_info:  /html/body/modal-container/div/div/div/div[4]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点击提交
+check:
+      - element_info: //img[@alt='Scan me!']
+        find_type: XPATH
+        info: 识别到二维码
