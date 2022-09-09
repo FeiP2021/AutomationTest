@@ -26,7 +26,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """首页---设置"""
+    """每日抽奖"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -44,7 +44,7 @@ class Demo_UI(myunit.MyTest):
     @ddt.data(*daily_lotteryData)
     def test_daily_lottery(self,datayaml):
         """
-        首页---设置操作测试
+        每日抽奖
         :param datayaml: 加载login_data登录测试数据
         :return:
         """

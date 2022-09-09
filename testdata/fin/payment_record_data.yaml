@@ -1,0 +1,7 @@
+-
+  id: test_payment_record
+  detail : 付款记录
+  screenshot : test
+  data :
+  check :
+    - TH

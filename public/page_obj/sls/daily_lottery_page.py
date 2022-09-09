@@ -52,9 +52,6 @@ class daily_lottery(Page):
     # 点击提交
     daily_lottery_button12= (By.XPATH, testData.get_elementinfo(11))
 
-
-
-
     def user_daily_lottery(self,comment):
         """
         :param comment
