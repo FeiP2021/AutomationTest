@@ -47,7 +47,9 @@ class Demo_UI(myunit.MyTest):
         退出登录
         :return:
         """
-        dhl_login(self.driver).login_exit()
+        dhl_login(self.driver).logout_button()
+
+
     def applyMaterialsTest_verify(self,*args):
 
         applyMaterialsALL(self.driver).applyMaterialsTestALL(*args)
@@ -65,6 +67,7 @@ class Demo_UI(myunit.MyTest):
         log.info("当前执行测试用例ID-> {0} ; 测试点-> {1}".format(datayaml['id'], datayaml['detail']))
         self.applyMaterialsTest_verify(datayaml['data']['materialstype'])
         po = applyMaterialsALL(self.driver)
+        self.exit_login_check()
 
 
 if __name__=='__main__':

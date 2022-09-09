@@ -55,7 +55,7 @@ class dhl_login(Page):
     # 点击登录
     login_button_loc3 = (By.XPATH, testData.get_elementinfo(5))
     # 点击退出
-    logout_button = (By.XPATH, testData.get_elementinfo(6))
+    logout_button1 = (By.XPATH, testData.get_elementinfo(6))
 
     def login_phone(self, phone):
         """
@@ -100,17 +100,17 @@ class dhl_login(Page):
         退出按钮
         :return:
         """
-        self.find_element(*self.logout_button).click()
+        self.find_element(*self.logout_button1).click()
 
-    # def login_exit(self):
-    #     """
-    #     退出系统
-    #     :return:
-    #     """
-    #     above = self.find_element(*self.login_exit_loc)
-    #     ActionChains(self.driver).move_to_element(above).perform()
-    #     sleep(2)
-    #     self.find_element(*self.login_exit_button_loc).click()
+    def login_exit(self):
+        """
+        退出系统
+        :return:
+        """
+        above = self.find_element(*self.login_exit_loc)
+        ActionChains(self.driver).move_to_element(above).perform()
+        sleep(2)
+        self.find_element(*self.login_exit_button_loc).click()
 
     def user_login(self, phone, password, code):
         """
@@ -134,19 +134,3 @@ class dhl_login(Page):
         sleep(3)
         # self.logout_button
         # sleep(3)
-
-    # phone_pawd_error_hint_loc = (By.XPATH,testData.get_CheckElementinfo(0))
-    # user_login_success_loc = (By.XPATH,testData.get_CheckElementinfo(1))
-    # exit_login_success_loc = (By.XPATH,testData.get_CheckElementinfo(2))
-
-    # 手机号或密码错误提示
-    # def phone_pawd_error_hint(self):
-    #     return self.find_element(*self.phone_pawd_error_hint_loc).text
-    #
-    # # 登录成功用户名
-    # def user_login_success_hint(self):
-    #     return self.find_element(*self.user_login_success_loc).text
-    #
-    # # 退出登录
-    # def exit_login_success_hint(self):
-    #     return self.find_element(*self.exit_login_success_loc).text
