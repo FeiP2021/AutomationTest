@@ -7,7 +7,6 @@
 # @Time: 9月 07, 2022
 # ---
 
-
 import os,sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(BASE_DIR)
@@ -54,3 +53,11 @@ OPS_TEST_DIR = os.path.join(BASE_DIR,"testcase/ops")
 OPS_TEST_DATA_YAML = os.path.join(BASE_DIR,"testdata/ops")
 # 元素控件
 OPS_TEST_Element_YAML = os.path.join(BASE_DIR,"testyaml/ops")
+
+# sls
+# 测试用例目录
+SLS_TEST_DIR = os.path.join(BASE_DIR,"testcase/sls")
+# 测试数据文件
+SLS_TEST_DATA_YAML = os.path.join(BASE_DIR,"testdata/sls")
+# 元素控件
+SLS_TEST_Element_YAML = os.path.join(BASE_DIR,"testyaml/sls")
