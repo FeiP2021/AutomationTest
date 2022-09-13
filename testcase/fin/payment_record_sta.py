@@ -31,7 +31,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """首页---设置"""
+    """待付款账单支付"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -55,7 +55,7 @@ class Demo_UI(myunit.MyTest):
     # @ddt.data(*payment_recordData)
     def test_payment_record(self):
         """
-        首页---设置操作测试
+        待付款账单支付
         :param datayaml: 加载login_data登录测试数据
         :return:
         """
