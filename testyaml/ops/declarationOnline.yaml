@@ -19,7 +19,7 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 点击编辑申报信息
-      - element_info: /html/body/app-root/div[2]/app-the-online-declaration-compile/div/div/ul/li[3]/button
+      - element_info: /html/body/app-root/div[2]/app-the-online-declaration-compile/div/div/ul/li[1]/button
         find_type: XPATH
         operate_type: click
         info: 选C类
@@ -27,7 +27,7 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 点击下一步
-      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/button[2]
+      - element_info: //input[@id='jgfs']
         find_type: XPATH
         operate_type: click
         info: 选1
@@ -37,7 +37,7 @@ testcase:
         info: 选2
       - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/form[2]/div/div[2]/ul/li/input
         find_type: XPATH
-        operate_type: click
+        operate_type: seng_keys
         info: 填1
       - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/form[2]/div/div[2]/ul/li/div/div/input
         find_type: XPATH
@@ -47,15 +47,31 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 下一步
-      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[3]/button[2]
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/div[2]/button[2]
         find_type: XPATH
         operate_type: click
         info: 选常用
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[2]/div/table/tbody/tr[6]/td[7]/button[1]
+        find_type: XPATH
+        operate_type: click
+        info: 选常用
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/div[1]/div/div/form/ul/li[5]/span[2]/input
+        find_type: XPATH
+        operate_type: click
+        info: 填1
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/div[1]/div/div/form/ul/li[5]/span[4]/input
+        find_type: XPATH
+        operate_type: click
+        info: 填2
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/div[1]/div/div/form/ul/div/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 保存
       - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[3]/button[2]
         find_type: XPATH
         operate_type: click
         info: 点预览
-      - element_info: xpath=//body[@id='BodyID']/app-root/div[2]/app-declaration-for-confirmation/div/div/div[3]/div[2]/div[8]/label
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declaration-for-confirmation/div/div/div[3]/div[2]/div[8]/label
         find_type: XPATH
         operate_type: click
         info: 点击我同意
@@ -67,6 +83,22 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 点击确定
+      - element_info:  /html/body/app-root/div[2]/app-declare-means/div/div/form[2]/div/div[1]/ul/li/div[1]/div/div/ul/table/tbody/tr[1]
+        find_type: XPATH
+        operate_type: click
+        info: 选1的类型
+      - element_info:  /html/body/app-root/div[2]/app-declare-means/div/div/form[2]/div/div[1]/ul/li/div[2]/div/div/ul/table/tbody/tr[1]
+        find_type: XPATH
+        operate_type: click
+        info: 选2的类型
+      - element_info:  /html/body/app-root/div[2]/app-declare-means/div/div/form[2]/div/div[2]/ul/li/div/div/div/ul/table/tbody/tr[2]
+        operate_type: click
+        info: 选3的类型
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[3]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 下一步
+
 check:
       - element_info: //img[@alt='Scan me!']
         find_type: XPATH
