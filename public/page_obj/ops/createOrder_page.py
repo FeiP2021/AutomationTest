@@ -62,30 +62,6 @@ class createOrder(Page):
     # 点继续打印
     declarationOnline_button17 = (By.XPATH, testData.get_elementinfo(16))
 
- #在线申报   -------------------------------------------------------------------------------------------------------------------------------------------------------
-    # 查询和服务
-    # declarationOnline_button17 = (By.XPATH, testData.get_elementinfo(16))
-    # 点击在线申报
-    declarationOnline_button18 = (By.XPATH, testData.get_elementinfo(17))
-    # 点击操作
-    declarationOnline_button19 = (By.XPATH, testData.get_elementinfo(18))
-    # 点击编辑申报信息
-    declarationOnline_button20 = (By.XPATH, testData.get_elementinfo(19))
-    # 点击下一步
-    declarationOnline_button21 = (By.XPATH, testData.get_elementinfo(20))
-    # 点击下一步
-    declarationOnline_button22 = (By.XPATH, testData.get_elementinfo(21))
-    # 点击下一步
-    declarationOnline_button23 = (By.XPATH, testData.get_elementinfo(22))
-    # 点击预览
-    declarationOnline_button24 = (By.XPATH, testData.get_elementinfo(23))
-    # 点击我同意
-    declarationOnline_button25 = (By.XPATH, testData.get_elementinfo(24))
-    # 点击提交
-    declarationOnline_button26 = (By.XPATH, testData.get_elementinfo(25))
-    # 点击确定
-    declarationOnline_button27 = (By.XPATH, testData.get_elementinfo(26))
-
 
 
 
