@@ -66,7 +66,7 @@ class createOrder(Page):
 
 
 
-    def createOrder_test(self,money):
+    def createOrder_test(self):
         """
         :param comment
         :return:
@@ -136,37 +136,9 @@ class createOrder(Page):
         self.find_element(*self.declarationOnline_button17).click()
         sleep(3)
         print("结束提交")
-
-
-
-        #self.driver.switch_to_window(windows[0])  # 切换回窗口
-        #sleep(3)
-
-    def createOrder_user(self):
-        """
-        :param comment
-        :return:
-        """
-        above = self.find_element(*self.declarationOnline_button17)
-        ActionChains(self.driver).move_to_element(above).perform()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button18).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button19).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button20).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button21).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button22).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button23).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button24).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button25).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button26).click()
-        sleep(1)
-        self.find_element(*self.declarationOnline_button27).click()
-        sleep(1)
+        self.driver.close()
+        windows=self.driver.window_handles
+        self.driver.switch_to_window(windows[0])
+        sleep(3)
+        self.driver.refresh()
+        sleep(5)

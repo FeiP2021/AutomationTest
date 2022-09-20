@@ -25,7 +25,6 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
 from config import setting
 from public.models import myunit
-from public.page_obj.ops.createOrder_page import createOrder
 from public.page_obj.admin.dhl_loginPage import dhl_login
 from public.models.log import Log
 
@@ -50,6 +49,10 @@ class Demo_UI(myunit.MyTest):
         """
         dhl_login(self.driver).user_login(phone,password,code)
 
+    def createOrder_verify(self,*args):
+
+        createOrder(self.driver).createOrder_test()
+
     def declarationOnline_user(self,*args):
 
         declarationOnline(self.driver).declarationOnline_user(*args)
@@ -65,6 +68,7 @@ class Demo_UI(myunit.MyTest):
         log.info("当前执行测试用例ID-> {0} ; 测试点-> {1}".format(datayaml['id'],datayaml['detail']))
         # 调用登录方法
         self.user_login_verify('18734912442','asd123','pentestyz')
+        self.createOrder_verify()
         self.declarationOnline_user()
 
 if __name__=='__main__':
