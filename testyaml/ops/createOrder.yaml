@@ -1,0 +1,136 @@
+estinfo:
+      - id: test_payment_record
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: //a[contains(text(),'我要寄件')]
+        find_type: XPATH
+        operate_type: click
+        info: 点击我要寄件
+      - element_info:  //ul[@id='expressMenuId']/li/span
+        find_type: XPATH
+        operate_type: click
+        info: 点击创建运单
+      - element_info: //div[@id='center']/a/div/img
+        find_type: XPATH
+        operate_type: click
+        info: 点击账号制单
+      - element_info: //input[@value='常用付款账户']
+        find_type: XPATH
+        operate_type: click
+        info: 选择付款人账号
+      - element_info: /html/body/div[2]/form/div/div/table/tbody/tr/td[6]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[1]/table/tbody/tr[2]/td/table/tbody/tr[1]/td/div[2]/input[2]
+        find_type: XPATH
+        operate_type: click
+        info: 选择发件地址
+      - element_info: /html/body/div[3]/form/div/div/table/tbody/tr/td[16]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[1]/table/tbody/tr[4]/td/table/tbody/tr[1]/td/div[2]/input[2]
+        find_type: XPATH
+        operate_type: click
+        info: 选择收件地址
+      - element_info: /html/body/div[3]/div/form/div/table/tbody/tr[3]/td[17]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[2]/table/tbody/tr[5]/td/table[1]/tbody/tr[1]/td/div[2]/input[2]
+        operate_type: click
+        info: 选择收件地址
+      - element_info: /html/body/div[2]/form/div/div/table/tbody/tr[6]/td[3]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[2]/table/tbody/tr[6]/td/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td[1]/div/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输入金额
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[2]/table/tbody/tr[9]/td/table/tbody/tr[5]/td/div[1]/input
+        find_type: XPATH
+        operate_type: click
+        info: 点击我同意
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[2]/table/tbody/tr[6]/td/table[2]/tbody/tr[2]/td/table/tbody/tr[2]/td/input[2]
+        find_type: XPATH
+        operate_type: click
+        info: 常用明细
+      - element_info: /html/body/div[4]/form[1]/div/div/table/tbody/tr[16]/td[9]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 选择
+      - element_info: /html/body/div[5]/div[8]/div[1]/div[6]/form[1]/table/tbody/tr[2]/td/table/tbody/tr[1]/td/input[4]
+        find_type: XPATH
+        operate_type: click
+        info: 点击提交
+      - element_info: /html/body/div[9]/input[1]
+        find_type: XPATH
+        operate_type: click
+        info: 点击继续打印
+
+
+
+
+
+
+
+
+
+      - element_info: //a[contains(text(),'查询和服务')]
+        find_type: XPATH
+        operate_type: click
+        info: 查询和服务
+      - element_info: //div[@id='queryMenuId']/ul[3]/li[3]/span
+        find_type: XPATH
+        operate_type: click
+        info: 点击在线申报
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-online-declaration/div/div/app-online-reporting/div/div/form/table/tbody/tr[2]/td[10]/a
+        find_type: XPATH
+        operate_type: click
+        info: 点击操作
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-online-declaration/div/div/app-online-reporting/div/div/form/table/tbody/tr[2]/td[10]/a/div/li
+        find_type: XPATH
+        operate_type: click
+        info: 点击编辑申报信息
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declare-means/div/div/div[2]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击下一步
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declare-means/div/div/div[2]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点击下一步
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declare-means/div/div/div[3]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点击下一步
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declare-means/div/div/div[3]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点击预览
+      - element_info: xpath=//body[@id='BodyID']/app-root/div[2]/app-declaration-for-confirmation/div/div/div[3]/div[2]/div[8]/label
+        find_type: XPATH
+        operate_type: click
+        info: 点击我同意
+      - element_info: //body[@id='BodyID']/app-root/div[2]/app-declaration-for-confirmation/div/div/div[4]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点击提交
+      - element_info: //body[@id='BodyID']/modal-container/div/div/app-prompt-message-box/div/div[2]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击确定
+
+
+
+
+
+
+
+check:
+      - element_info: //img[@alt='Scan me!']
+        find_type: XPATH
+        info: 识别到二维码
