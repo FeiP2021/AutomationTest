@@ -2,15 +2,6 @@
 # -*- coding: utf-8 -*-
 # ---
 # @Software: PyCharm
-# @File: TestOnline.py
-# @Author: feip
-# @Site: 
-# @Time: 10:09,9月 20, 2022
-# ---
-#!python3.9
-# -*- coding: utf-8 -*-
-# ---
-# @Software: PyCharm
 # @File: declarationOnline_sta.py
 # @Author: feip
 # @Site:
@@ -19,7 +10,7 @@
 import os,sys
 
 from public.page_obj.ops.createOrder_page import createOrder
-from public.page_obj.ops.declarationOnline_page import declarationOnline
+from public.page_obj.ops.declarationOnline_C_page import declarationOnline_C
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
@@ -30,8 +21,8 @@ from public.models.log import Log
 
 
 try:
-    f_daily_lottery =open(setting.OPS_TEST_DATA_YAML + '/' + 'declarationOnline_data.yaml',encoding='utf-8')
-    declarationOnlineData = yaml.load(f_daily_lottery)
+    f_daily_lottery =open(setting.OPS_TEST_DATA_YAML + '/' + 'declarationOnline_C_data.yaml',encoding='utf-8')
+    declarationOnline_C_Data = yaml.load(f_daily_lottery)
 except FileNotFoundError as file:
     log = Log()
     log.error("文件不存在：{0}".format(file))
@@ -53,12 +44,12 @@ class Demo_UI(myunit.MyTest):
 
         createOrder(self.driver).createOrder_test()
 
-    def declarationOnline_user(self,*args):
+    def declarationOnline_C_user(self,*args):
 
-        declarationOnline(self.driver).declarationOnline_user(*args)
+        declarationOnline_C(self.driver).declarationOnline_C_user(*args)
 
-    @ddt.data(*declarationOnlineData)
-    def test_declarationOnline(self,datayaml):
+    @ddt.data(*declarationOnline_C_Data)
+    def test_declarationOnline_C(self,datayaml):
         """
         在线申报
         :param datayaml: 加载在线申报测试数据
@@ -69,7 +60,7 @@ class Demo_UI(myunit.MyTest):
         # 调用登录方法
         self.user_login_verify('18734912442','asd123','pentestyz')
         self.createOrder_verify()
-        self.declarationOnline_user()
+        self.declarationOnline_C_user()
 
 if __name__=='__main__':
     unittest.main()

@@ -1,7 +1,0 @@
--
-  id: test_declarationOnline
-  detail : 在线申报
-  screenshot : test
-  data :
-  check :
-    - TH

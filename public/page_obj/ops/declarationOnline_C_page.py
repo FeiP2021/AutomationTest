@@ -20,10 +20,10 @@ from time import sleep
 from public.models.GetYaml import getyaml
 from public.models.log import Log
 
-testData = getyaml(setting.OPS_TEST_Element_YAML+ '/' + 'declarationOnline.yaml')
+testData = getyaml(setting.OPS_TEST_Element_YAML+ '/' + 'declarationOnline_C.yaml')
 log = Log()
 
-class declarationOnline(Page):
+class declarationOnline_C(Page):
     """
     首页---设置页面
     """
@@ -83,7 +83,7 @@ class declarationOnline(Page):
         #self.driver.switch_to_window(windows[0])  # 切换回窗口
         #sleep(3)
 
-    def declarationOnline_user(self):
+    def declarationOnline_C_user(self):
         """
         :param comment
         :return:
