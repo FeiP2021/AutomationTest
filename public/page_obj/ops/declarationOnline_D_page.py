@@ -84,7 +84,10 @@ class declarationOnline_D(Page):
     declarationOnline_D_button25 = (By.XPATH, testData.get_elementinfo(25))
     # 确定
     declarationOnline_D_button26 = (By.XPATH, testData.get_elementinfo(26))
-
+    # 搜常用商品
+    declarationOnline_D_button16_1 = (By.XPATH, testData.get_elementinfo(27))
+    # 点搜索
+    declarationOnline_D_button16_2= (By.XPATH, testData.get_elementinfo(28))
 
 
 
@@ -111,7 +114,7 @@ class declarationOnline_D(Page):
         sleep(1)
         self.find_element(*self.declarationOnline_D_button3).click()
         sleep(1)
-        # self.find_element(*self.declarationOnline_D_button4).click()
+        self.find_element(*self.declarationOnline_D_button4).click()
         sleep(1)
         self.find_element(*self.declarationOnline_D_button5).click()
         sleep(1)
@@ -136,10 +139,10 @@ class declarationOnline_D(Page):
         self.find_element(*self.declarationOnline_D_button10).send_keys('2')
         sleep(1)
         #填净重
-        self.find_element(*self.declarationOnline_button11).send_keys('100')
+        self.find_element(*self.declarationOnline_D_button11).send_keys('1')
         sleep(1)
         #填协议号
-        self.find_element(*self.declarationOnline_button12).send_keys('1234')
+        self.find_element(*self.declarationOnline_D_button12).send_keys('1234')
         sleep(1)
         #选贸易国别
         self.find_element(*self.declarationOnline_D_button13).click()
@@ -151,7 +154,13 @@ class declarationOnline_D(Page):
         sleep(1)
         self.find_element(*self.declarationOnline_D_button15).click()
         sleep(1)
+
+
         self.find_element(*self.declarationOnline_D_button16).click()
+        sleep(1)
+        self.find_element(*self.declarationOnline_D_button16_1).send_keys('0920D')
+        sleep(1)
+        self.find_element(*self.declarationOnline_D_button16_2).click()
         sleep(1)
         #选第三个
         windows=self.driver.window_handles
@@ -169,7 +178,7 @@ class declarationOnline_D(Page):
         sleep(1)
         #点保存
         self.find_element(*self.declarationOnline_D_button21).click()
-        sleep(1)
+        sleep(3)
         self.find_element(*self.declarationOnline_D_button22).click()
         sleep(1)
         self.find_element(*self.declarationOnline_D_button23).click()

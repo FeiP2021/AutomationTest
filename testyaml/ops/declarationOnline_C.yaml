@@ -51,7 +51,7 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 选常用
-      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[2]/div/table/tbody/tr[6]/td[7]/button[1]
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[2]/div/table/tbody/tr[2]/td[7]/button[1]
         find_type: XPATH
         operate_type: click
         info: 选常用
@@ -98,6 +98,15 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 下一步
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[1]/div/input
+        find_type: XPATH
+        operate_type: click
+        info: C类选常用输入查询11.1
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[1]/div/button
+        find_type: XPATH
+        operate_type: click
+        info: C类选常用点查询11.2
+
 
 check:
       - element_info: //img[@alt='Scan me!']

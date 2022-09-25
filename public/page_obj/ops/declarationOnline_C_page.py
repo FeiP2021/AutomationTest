@@ -78,7 +78,10 @@ class declarationOnline_C(Page):
     declarationOnline_button22 = (By.XPATH, testData.get_elementinfo(22))
     # 保存的下一步
     declarationOnline_button23 = (By.XPATH, testData.get_elementinfo(23))
-
+    # 查询
+    declarationOnline_button11_1 = (By.XPATH, testData.get_elementinfo(24))
+    # 选择
+    declarationOnline_button11_2 = (By.XPATH, testData.get_elementinfo(25))
 
         #self.driver.switch_to_window(windows[0])  # 切换回窗口
         #sleep(3)
@@ -123,7 +126,12 @@ class declarationOnline_C(Page):
         self.find_element(*self.declarationOnline_button22).click()
         self.find_element(*self.declarationOnline_button10).click()
         sleep(1)
+
         self.find_element(*self.declarationOnline_button11).click()
+        sleep(1)
+        self.find_element(*self.declarationOnline_button11_1).send_keys('0921C')
+        sleep(1)
+        self.find_element(*self.declarationOnline_button11_2).click()
         sleep(1)
         windows=self.driver.window_handles
         self.driver.switch_to_window(windows[-1])

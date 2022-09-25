@@ -71,10 +71,10 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 选常用商品
-      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[2]/div/table/tbody/tr[4]/td[7]/button[1]
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[2]/div/table/tbody/tr[2]/td[7]/button[1]
         find_type: XPATH
         operate_type: click
-        info: 选第三个
+        info: 选第1个
       - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[2]/div[1]/div/div/form/ul/li[5]/span[2]/input
         find_type: XPATH
         operate_type: click
@@ -110,6 +110,16 @@ testcase:
         find_type: XPATH
         operate_type: click
         info: 确定
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[1]/div/input
+        find_type: XPATH
+        operate_type: click
+        info: D类选常用输入查询15.1
+      - element_info: /html/body/app-root/div[2]/app-declare-means/div/div/div[1]/div[1]/div/button
+        find_type: XPATH
+        operate_type: click
+        info: D类选常用点查询15.2
+
+
 
 check:
       - element_info: //img[@alt='Scan me!']
