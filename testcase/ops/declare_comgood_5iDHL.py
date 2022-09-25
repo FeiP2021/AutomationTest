@@ -40,7 +40,7 @@ class Demo_UI(myunit.MyTest):
     @ddt.data(*declare_comgood_Data)
     def test_declare_comgood(self,datayaml):
         """
-        在线申报
+        在线申报商品中文名称繁体字验证&新增、修改、删除商品
         :param datayaml: 加载在线申报测试数据
         :return:
         """
