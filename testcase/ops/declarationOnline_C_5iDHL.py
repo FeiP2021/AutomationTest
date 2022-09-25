@@ -27,7 +27,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class declarationOnline_C_5iDHL(myunit.MyTest):
-    """在线申报C类申报"""
+    """在线申报C类申报：Eship制单-5iDHL申报全流程"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录

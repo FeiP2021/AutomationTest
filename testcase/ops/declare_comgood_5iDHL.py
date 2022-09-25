@@ -22,7 +22,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """在线申报"""
+    """在线申报商品中文名称繁体字验证&新增、修改、删除商品"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录

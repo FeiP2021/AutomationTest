@@ -24,7 +24,7 @@ except FileNotFoundError as file:
     log.error("文件不存在：{0}".format(file))
 @ddt.ddt
 class declarationOnline_CommonInfo_5iDHL(myunit.MyTest):
-    """在线申报-常用申报信息"""
+    """在线申报-常用申报信息（）"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
