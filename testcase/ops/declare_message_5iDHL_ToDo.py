@@ -3,7 +3,7 @@
 import os,sys
 
 
-from public.page_obj.ops.declare_message_page import declare_message
+from public.page_obj.ops.declare_info_page import declare_info
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
