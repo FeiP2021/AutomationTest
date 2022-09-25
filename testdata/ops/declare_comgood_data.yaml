@@ -1,0 +1,7 @@
+-
+  id: test_declare_commongood
+  detail : 申报信息
+  screenshot : test
+  data :
+  check :
+    - TH

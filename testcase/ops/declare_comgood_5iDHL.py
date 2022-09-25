@@ -1,14 +1,9 @@
-#!python3.9
-# -*- coding: utf-8 -*-
-# @Software: PyCharm
-# @File: declarationOnline_sta.py
-# @Author: zhaoyj
-# @Time: 15:59,9月 25, 2022
+
 # ---
 import os,sys
 
-from public.page_obj.ops.createOrder_page import createOrder
-from public.page_obj.ops.declarationOnline_C_page import declarationOnline_C
+
+from public.page_obj.ops.declare_comgood_page import declare_comgood
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
@@ -19,15 +14,15 @@ from public.models.log import Log
 
 
 try:
-    f_daily_lottery =open(setting.OPS_TEST_DATA_YAML + '/' + 'declarationOnline_C_data.yaml',encoding='utf-8')
-    declarationOnline_C_Data = yaml.load(f_daily_lottery)
+    f_daily_lottery =open(setting.OPS_TEST_DATA_YAML + '/' + 'declare_comgood_data.yaml',encoding='utf-8')
+    declare_comgood_Data = yaml.load(f_daily_lottery)
 except FileNotFoundError as file:
     log = Log()
     log.error("文件不存在：{0}".format(file))
 
 @ddt.ddt
-class declarationOnline_C_5iDHL(myunit.MyTest):
-    """在线申报C类申报"""
+class Demo_UI(myunit.MyTest):
+    """在线申报"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -38,18 +33,14 @@ class declarationOnline_C_5iDHL(myunit.MyTest):
         """
         dhl_login(self.driver).user_login(phone,password,code)
 
-    def createOrder_verify(self,*args):
+    def declare_comgood_user(self,*args):
 
-        createOrder(self.driver).createOrder_test()
+        declare_comgood(self.driver).declare_comgood_user(*args)
 
-    def declarationOnline_C_user(self,*args):
-
-        declarationOnline_C(self.driver).declarationOnline_C_user(*args)
-
-    @ddt.data(*declarationOnline_C_Data)
-    def test_declarationOnline_C(self,datayaml):
+    @ddt.data(*declare_comgood_Data)
+    def test_declare_comgood(self,datayaml):
         """
-        在线申报C类申报主流程
+        在线申报
         :param datayaml: 加载在线申报测试数据
         :return:
         """
@@ -57,8 +48,7 @@ class declarationOnline_C_5iDHL(myunit.MyTest):
         log.info("当前执行测试用例ID-> {0} ; 测试点-> {1}".format(datayaml['id'],datayaml['detail']))
         # 调用登录方法
         self.user_login_verify('18734912442','asd123','pentestyz')
-        self.createOrder_verify()
-        self.declarationOnline_C_user()
+        self.declare_comgood_user()
 
 if __name__=='__main__':
     unittest.main()
