@@ -1,0 +1,75 @@
+estinfo:
+      - id: test_declaer_platform
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: //a[contains(text(),'个人中心')]
+        find_type: XPATH
+        operate_type: click
+        info: 个人中心
+      - element_info: //div[@id='myAccPanelId']/ul[2]/li[4]/span
+        find_type: XPATH
+        operate_type: click
+        info: 常用电商平台
+
+ #添加
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/ul/div/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击添加
+      - element_info: /html/body/modal-container/div/div/div/form/ul/li[1]/span[2]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输信用代码
+      - element_info: /html/body/modal-container/div/div/div/form/ul/li[2]/span[2]/input
+        find_type: XPATH
+        operate_type: send_keys
+        info: 填名称
+      - element_info: /html/body/modal-container/div/div/div/form/ul/li[3]/span[2]/input
+        find_type: XPATH
+        operate_type: click
+        info: 填编号
+      - element_info: /html/body/modal-container/div/div/div/form/div/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点确定
+ #修改新信息
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/div[2]/div/table/tbody/tr[3]/td[4]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点编辑
+      - element_info: /html/body/modal-container/div/div/div/form/ul/li[2]/span[2]/input
+        find_type: XPATH
+        operate_type: seng_keys
+        info: 修改名称
+      - element_info: /html/body/modal-container/div/div/div/form/div/button[3]
+        find_type: XPATH
+        operate_type: click
+        info: 点确定
+#删除
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/div[2]/div/table/tbody/tr[3]/td[4]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点编辑
+      - element_info: /html/body/modal-container/div/div/div/form/div/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点删除
+      - element_info: /html/body/modal-container/div/div/app-prompt-message-box/div/div[2]/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点确定
+
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/ul/li[4]
+        find_type: XPATH
+        operate_type: click
+        info: 常用生产/消费使用单位
+
+
+
+
+
+check:
+      - element_info: //img[@alt='Scan me!']
+        find_type: XPATH
+        info: 识别到二维码

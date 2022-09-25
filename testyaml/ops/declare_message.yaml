@@ -1,0 +1,40 @@
+estinfo:
+      - id: test_declaer_use
+        title: 登录5iDHL
+        info: 打开5iDHL首页
+testcase:
+      - element_info: //a[contains(text(),'个人中心')]
+        find_type: XPATH
+        operate_type: click
+        info: 个人中心
+      - element_info: //div[@id='myAccPanelId']/ul[2]/li[4]/span
+        find_type: XPATH
+        operate_type: click
+        info: 常用申报信息
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/ul/li[5]
+        find_type: XPATH
+        operate_type: click
+        info: 常用生产/消费使用单位
+ #编辑
+      - element_info: /html/body/app-root/div[2]/app-commonly-used-declaration-information/div/div[2]/div[2]/div/table/tbody/tr[2]/td[3]/button
+        find_type: XPATH
+        operate_type: click
+        info: 点击编辑
+      - element_info: /html/body/modal-container/div/div/div/form/ul/li[2]/span[2]/textarea
+        find_type: XPATH
+        operate_type: send_keys
+        info: 输编号
+      - element_info: /html/body/modal-container/div/div/div/form/div/button[2]
+        find_type: XPATH
+        operate_type: click
+        info: 点确定
+
+
+
+
+
+
+check:
+      - element_info: //img[@alt='Scan me!']
+        find_type: XPATH
+        info: 识别到二维码
