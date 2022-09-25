@@ -30,11 +30,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 
-testData = getyaml(setting.OPS_TEST_Element_YAML+ '/' + 'declare_message.yaml')
+testData = getyaml(setting.OPS_TEST_Element_YAML+ '/' + 'declare_info.yaml')
 log = Log()
 
 
-class declare_message(Page):
+class declare_info(Page):
     """
     首页---设置页面
     """
@@ -59,7 +59,7 @@ class declare_message(Page):
         #self.driver.switch_to_window(windows[0])  # 切换回窗口
         #sleep(3)
 
-    def declare_message_user(self):
+    def declare_info_user(self):
         """
         :param comment
         :return:

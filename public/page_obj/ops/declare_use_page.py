@@ -46,7 +46,7 @@ class declare_use(Page):
     # 常用申报信息
     declare_use_begin1 = (By.XPATH, testData.get_elementinfo(1))
     # 常用申报/消费单位
-    declare_platform_begin2 = (By.XPATH, testData.get_elementinfo(13))
+    declare_use_begin2 = (By.XPATH, testData.get_elementinfo(13))
 #添加
     # 点击添加
     declare_use_add0 = (By.XPATH, testData.get_elementinfo(2))

@@ -1,10 +1,10 @@
 
 # ---
 import os,sys
-
-from public.page_obj.ops.createOrder_page import createOrder
+from public.page_obj.ops.declare_info_page import declare_info
 from public.page_obj.ops.declare_management_page import declare_management
-
+from public.page_obj.ops.declare_platform_page import declare_platform
+from public.page_obj.ops.declare_use_page import declare_use
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 import unittest,ddt,yaml
 from config import setting
@@ -22,7 +22,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """在线申报"""
+    """在线申报-常用申报信息"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -36,11 +36,20 @@ class Demo_UI(myunit.MyTest):
     def declare_management_user(self,*args):
 
         declare_management(self.driver).declare_management_user(*args)
+    def declare_info_user(self,*args):
+
+        declare_info(self.driver).declare_info_user(*args)
+    def declare_platform_user(self,*args):
+
+        declare_platform(self.driver).declare_platform_user(*args)
+    def declare_use_user(self,*args):
+
+        declare_use(self.driver).declare_use_user(*args)
 
     @ddt.data(*declare_management_Data)
     def test_declare_management(self,datayaml):
         """
-        在线申报
+        在线申报-常用申报信息（新增、修改、删除等）
         :param datayaml: 加载在线申报测试数据
         :return:
         """
@@ -49,6 +58,9 @@ class Demo_UI(myunit.MyTest):
         # 调用登录方法
         self.user_login_verify('18734912442','asd123','pentestyz')
         self.declare_management_user()
+        self.declare_info_user()
+        self.declare_platform_user()
+        self.declare_use_user()
 
 if __name__=='__main__':
     unittest.main()

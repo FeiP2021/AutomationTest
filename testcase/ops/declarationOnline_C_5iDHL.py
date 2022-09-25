@@ -29,7 +29,7 @@ except FileNotFoundError as file:
 
 @ddt.ddt
 class Demo_UI(myunit.MyTest):
-    """在线申报"""
+    """在线申报C类申报"""
     def user_login_verify(self,phone,password,code):
         """
         用户登录
@@ -51,7 +51,7 @@ class Demo_UI(myunit.MyTest):
     @ddt.data(*declarationOnline_C_Data)
     def test_declarationOnline_C(self,datayaml):
         """
-        在线申报
+        在线申报C类申报主流程
         :param datayaml: 加载在线申报测试数据
         :return:
         """
