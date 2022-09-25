@@ -28,7 +28,7 @@ except FileNotFoundError as file:
     log.error("文件不存在：{0}".format(file))
 
 @ddt.ddt
-class Demo_UI(myunit.MyTest):
+class declarationOnline_C_5iDHL(myunit.MyTest):
     """在线申报C类申报"""
     def user_login_verify(self,phone,password,code):
         """
